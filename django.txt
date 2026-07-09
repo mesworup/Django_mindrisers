@@ -49,3 +49,7 @@ project:
 # Start server
 python manage.py runserver
 
+
+# Create apps
+python manage.py startapp <app_name>
+
