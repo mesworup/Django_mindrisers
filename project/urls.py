@@ -16,8 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app1.views import index
+from app1.views import index, home, contact,aboutus     # from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', index),                              # path('index/', views.index)
+    path('home/', home),
+    path('contact/', contact),
+    path('aboutus/', aboutus)
 ]
+
+# browser url call: project.urs file ma check if the route exists or not: call the respective view function
+# browser/user -> url -> view -> function

@@ -53,3 +53,5 @@ python manage.py runserver
 # Create apps
 python manage.py startapp <app_name>
 
+# hamile app haru banayo ki settings.py ma halnu parxa tara if hamilai model(database) snga kaam garnu pareko xaina vani chai settings.py ma rakhnu parena
+# app banaye paxi hamle views -> url
