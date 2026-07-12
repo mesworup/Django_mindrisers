@@ -3,14 +3,18 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Welcome to the index page")
+#    context = {
+#        "title":"Welcome, This is the index page.",
+#    }
+   return render(request, 'index.html')#, context
 
 def home(request):
-    return HttpResponse("HOMEEEEEE")
+    return render(request,"home.html")
 
 def aboutus(request):
-    return HttpResponse("About Us")
+    return render(request, "aboutus.html")
 
 def contact(request):
-    return HttpResponse("Contact")
+    return render(request, "contact.html")
 
+# create dynamic html pages for all

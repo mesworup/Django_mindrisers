@@ -55,3 +55,7 @@ python manage.py startapp <app_name>
 
 # hamile app haru banayo ki settings.py ma halnu parxa tara if hamilai model(database) snga kaam garnu pareko xaina vani chai settings.py ma rakhnu parena
 # app banaye paxi hamle views -> url
+
+# Aba html pages rakhna lai chai
+    main folder ma Templates vanney folder banayera html pages banauney ani tespaxi render use garney instead of httpresponse
+    tespaxi settings.py ma Templates ko location add garney "DIRS" ma
