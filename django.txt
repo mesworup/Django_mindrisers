@@ -59,3 +59,20 @@ python manage.py startapp <app_name>
 # Aba html pages rakhna lai chai
     main folder ma Templates vanney folder banayera html pages banauney ani tespaxi render use garney instead of httpresponse
     tespaxi settings.py ma Templates ko location add garney "DIRS" ma
+
+
+
+# Database table
+# Todolist
+    - title                 STRING
+    - desctiption           STRING
+    - completion status     BOOLEAN
+    - date                  DATE
+
+# model_class -> create migration_file in migrations folder -> database table
+
+    # create migration file
+    python .\manage.py makemigrations
+
+    # create table
+    python manage.py migrate
