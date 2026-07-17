@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Todolist
 # Create your views here.
 
 def index(request):
@@ -17,4 +18,11 @@ def aboutus(request):
 def contact(request):
     return render(request, "contact.html")
 
+# Dynamically fetching data from model/database and displaying using GET method
+def task(request):
+    task=Todolist.objects.all()
+    context = {
+        'tasks':task
+    }
+    return render(request, 'task.html', context)
 # create dynamic html pages for all

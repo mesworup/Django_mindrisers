@@ -7,6 +7,10 @@ class Todolist(models.Model):
     status = models.BooleanField(default=False)
     date = models.DateField()
     
+    # convert the model showing from object representation to string representation in admin panel
+    def __str__(self):
+        return self.title
+    
 
 # Example model/database for notes app
 class notes(models.Model):

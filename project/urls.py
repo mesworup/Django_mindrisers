@@ -15,15 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from app1.views import index, home, contact,aboutus     # from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index),                              # path('index/', views.index)
-    path('home/', home),
-    path('contact/', contact),
-    path('aboutus/', aboutus)
+    path('',include('app1.urls')),      # added urls.py of app1 instead of individual urls
 ]
 
 # browser url call: project.urs file ma check if the route exists or not: call the respective view function

@@ -108,3 +108,18 @@ python manage.py startapp <app_name>
 
 # filter
     a = model_name.objects.filter(status=True).values()
+
+
+# Django admin customization
+
+# create admin user/superuser
+    python manage.py createsuperuser
+    mesworup
+    1234
+
+# we can check in dbsqlite3 in auth_user
+
+# Now to register our custom models in admin panel, we go to app1>admin.py
+
+
+
