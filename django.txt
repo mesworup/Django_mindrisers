@@ -76,3 +76,35 @@ python manage.py startapp <app_name>
 
     # create table
     python manage.py migrate
+
+
+# python shell
+    python manage.py shell
+
+# import todolist from app1
+    from app1.models import Todolist
+
+# read all data from table
+    <model_name>.objects.all()
+    todolist.objects.all()
+
+# add/create data
+    model_name.objects.create(title="First", description="something"....)
+
+# Retreive: single data fetch
+    a = model_name.objects.get(id="..")
+    a.name
+    a.description
+    a.status
+
+# Update:
+    a = model_name.objects.get(id="..")
+    a.field_name = "newdata..."
+    a.save()
+
+# Delete:
+    a = model_name.objects.get(id="..")
+    a.delete()
+
+# filter
+    a = model_name.objects.filter(status=True).values()
