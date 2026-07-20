@@ -26,3 +26,10 @@ def task(request):
     }
     return render(request, 'task.html', context)
 # create dynamic html pages for all
+
+def create_task(request):
+    return render(request, "create.html")
+
+# example new edit form template
+def edit_task(request):
+    return render(request, "edit.html")
