@@ -13,6 +13,9 @@
                 <th scope="col">Description</th>
                 <th scope="col">Date</th>
                 <th scope="col">Status</th>
+               <th scope="col">Actions</th>
+               <th scope="col">Actions</th>
+
             </tr>
         </thead>
         <tbody>
@@ -32,6 +35,13 @@
                         Pending
                     </span>
                     {% endif %}
+                </td>
+                <td>
+                    <a href=/task/mark/{{task.id}}/ class="btn btn-success">Mark</a>
+                    <!-- <button type="button" class="btn btn-success">Mark</button> -->
+                </td>
+                <td>
+                    <a href=/task/delete/{{task.id}}/ class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             {% endfor %}

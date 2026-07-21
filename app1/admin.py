@@ -22,7 +22,7 @@ from .models import Todolist
 
 # display model in searchfield form
 class TodolistAdmin(admin.ModelAdmin):
-    list_display=('id','title','description','date','status')
+    list_display=('id','title','description','status')
     search_fields = ('id','title')      # adds search field
     list_filter=('status',)             # adds a filter for status
     list_per_page=3                     # how many data to show on a page

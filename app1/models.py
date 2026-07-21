@@ -5,7 +5,7 @@ class Todolist(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     status = models.BooleanField(default=False)
-    date = models.DateField()
+    # date = models.DateField()
     
     # convert the model showing from object representation to string representation in admin panel
     def __str__(self):
