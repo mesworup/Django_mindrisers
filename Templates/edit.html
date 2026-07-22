@@ -1,21 +1,36 @@
 {% extends "base.html"%}
 
-{%block title%}Edit Page{%endblock title%}
+{%block title%}Edit Task{%endblock title%}
 
 {%block body%}
 
 <div class="container">
-<form>
+    {%if error%}
+    <div class="alert alert-danger" role="alert">
+         {{error}}
+    </div>
+    {%endif%}
+    <form method="POST">
+        {% csrf_token %}
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Hobby</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name= "title" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Short Description</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="description"></textarea>
+            <label for="floatingTextarea">Description</label>
+            <input type="text" class="form-control" name="description" id="exampleInputPassword1">
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
 </form>
 </div>
 
 {%endblock body%}
+
+{% comment %} 
+    "title":"Hello",
+    "description":"Hello something"
+{% endcomment %}

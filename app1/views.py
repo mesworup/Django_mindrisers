@@ -59,7 +59,17 @@ def delete_task(request,id):
     de.delete()
     return redirect('/task/')
 
-
-# example new edit form template
-def edit_task(request):
-    return render(request, "edit.html")
+def edit_task(request,id):
+    task=Todolist.objects.get(id=id)
+    context={
+        "task": task
+    }
+    if request.method=="POST":
+        titles=request.POST.get("title")
+        descriptions=request.POST.get("description")
+        task.title= titles
+        task.description =descriptions
+        task.save()
+        return redirect('/task/')
+    return render(request,"edit.html",context)
+    

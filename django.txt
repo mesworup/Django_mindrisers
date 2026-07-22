@@ -121,5 +121,15 @@ python manage.py startapp <app_name>
 
 # Now to register our custom models in admin panel, we go to app1>admin.py
 
+# sabai chahiney packages haru install garney
+    pip freeze > requirements.txt
+
+# install from requirements
+    pip install -r requirements.txt
+    pip uninstall -r requirements.txt
+
+# install dotenv
+    pip install python-dotenv
+
 
 
